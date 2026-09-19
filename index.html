@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="IDection Player privacy policy: what data the app handles, who it is shared with, and how to delete it.">
+<meta name="robots" content="index,follow">
+<title>IDection Player Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #f7f9fb;
+    --surface: #ffffff;
+    --surface-inset: #f0f3f6;
+    --text: #10151c;
+    --text-dim: #55606d;
+    --border: #e1e6ec;
+    --accent: #00798f;
+    --accent-soft: #e3f4f7;
+    --accent-2: #a8194a;
+    --accent-2-soft: #fbe7ee;
+    --code-bg: #eef1f4;
+    --shadow: 0 1px 2px rgba(16, 21, 28, 0.04), 0 8px 24px rgba(16, 21, 28, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0a0e14;
+      --surface: #0f151d;
+      --surface-inset: #131a24;
+      --text: #e8edf2;
+      --text-dim: #8a96a3;
+      --border: #242c38;
+      --accent: #00e5ff;
+      --accent-soft: rgba(0, 229, 255, 0.1);
+      --accent-2: #ff3d71;
+      --accent-2-soft: rgba(255, 61, 113, 0.1);
+      --code-bg: #131a24;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0a0e14;
+    --surface: #0f151d;
+    --surface-inset: #131a24;
+    --text: #e8edf2;
+    --text-dim: #8a96a3;
+    --border: #242c38;
+    --accent: #00e5ff;
+    --accent-soft: rgba(0, 229, 255, 0.1);
+    --accent-2: #ff3d71;
+    --accent-2-soft: rgba(255, 61, 113, 0.1);
+    --code-bg: #131a24;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: "Sora", "Helvetica Neue", Arial, sans-serif;
+    text-wrap: balance;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  code, .mono {
+    font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  .skiplink {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--surface);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 0 0 8px 0;
+    z-index: 100;
+  }
+  .skiplink:focus { left: 0; }
+
+  .masthead {
+    border-bottom: 1px solid var(--border);
+    padding: 40px 24px 32px;
+  }
+
+  .masthead-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .mark {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    margin-top: 4px;
+  }
+
+  .masthead-text { flex: 1 1 380px; min-width: 0; }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.15;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .meta-row strong { color: var(--text); font-weight: 500; }
+
+  .layout {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 36px 24px 80px;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 680px);
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.toc { display: none; }
+    details.toc-mobile { display: block; }
+  }
+
+  nav.toc {
+    position: sticky;
+    top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  nav.toc a {
+    font-family: "Sora", sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 6px 0;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+  }
+
+  nav.toc a:hover, nav.toc a:focus-visible {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  details.toc-mobile {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+  }
+
+  details.toc-mobile summary {
+    cursor: pointer;
+    padding: 14px 18px;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    list-style: none;
+  }
+  details.toc-mobile summary::-webkit-details-marker { display: none; }
+  details.toc-mobile summary::after {
+    content: "▾";
+    float: right;
+    color: var(--text-dim);
+  }
+  details.toc-mobile[open] summary::after { content: "▴"; }
+
+  details.toc-mobile ul {
+    margin: 0;
+    padding: 0 18px 16px 34px;
+  }
+  details.toc-mobile li { margin-bottom: 6px; font-size: 14.5px; }
+  details.toc-mobile a { color: var(--text-dim); text-decoration: none; }
+
+  main { min-width: 0; }
+
+  section {
+    padding-top: 8px;
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+
+  h3 {
+    font-size: 16.5px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 14px; max-width: 66ch; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; max-width: 66ch; }
+  li { margin-bottom: 6px; }
+
+  .lede {
+    font-size: 18.5px;
+    color: var(--text-dim);
+    max-width: 62ch;
+    margin-top: 18px;
+  }
+
+  strong { font-weight: 600; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 0 0 16px;
+    font-family: "Sora", sans-serif;
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  .callout strong { color: var(--accent); }
+
+  .summary-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0 8px;
+  }
+
+  .summary-row {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .summary-row.head { background: var(--border); }
+  .summary-row.head > div {
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+
+  .summary-row > div {
+    background: var(--surface);
+    padding: 12px 16px;
+    font-family: "Sora", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .summary-row .label { font-weight: 600; }
+  .summary-row .dim { color: var(--text-dim); }
+
+  @media (max-width: 640px) {
+    .summary-row { grid-template-columns: 1fr; }
+    .summary-row > div { padding: 10px 14px; }
+    .summary-row.head { display: none; }
+    .summary-row:not(.head) {
+      border-top: 3px solid var(--accent);
+    }
+    .summary-row > div::before {
+      content: attr(data-label);
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 3px;
+    }
+  }
+
+  table.perms {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 8px;
+    font-size: 14.5px;
+  }
+  table.perms th {
+    text-align: left;
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 0 12px 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  table.perms td {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    font-family: "Sora", sans-serif;
+  }
+  table.perms td.perm-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .perms-wrap { overflow-x: auto; }
+
+  footer {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  footer .rule {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 0 0 24px;
+  }
+
+  footer p {
+    font-family: "Sora", sans-serif;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+  }
+
+  html { scroll-behavior: smooth; }
+</style>
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<a class="skiplink" href="#main-content">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <svg class="mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="1" y="1" width="42" height="42" rx="11" stroke="var(--accent)" stroke-width="2"/>
+      <path d="M14 15v14l16-7-16-7z" fill="var(--accent)"/>
+    </svg>
+    <div class="masthead-text">
+      <span class="eyebrow">Legal document · Android app</span>
+      <h1>Privacy Policy</h1>
+      <p class="lede">How IDection Player handles your data when playing audio and video locally, over your network, and through Chromecast/DLNA.</p>
+      <div class="meta-row">
+        <span><strong>App:</strong> IDection Player</span>
+        <span><strong>Policy version:</strong> 1.0</span>
+        <span><strong>Last updated:</strong> September 18, 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Page contents">
+    <a href="#summary">Quick summary</a>
+    <a href="#controller">Data controller</a>
+    <a href="#data">Data we collect</a>
+    <a href="#sharing">Who data is shared with</a>
+    <a href="#permissions">Android permissions</a>
+    <a href="#security">Security</a>
+    <a href="#retention">Retention and deletion</a>
+    <a href="#purchases">Purchases (Plus)</a>
+    <a href="#children">Children</a>
+    <a href="#changes">Changes to this policy</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <details class="toc-mobile">
+    <summary>Page contents</summary>
+    <ul>
+      <li><a href="#summary">Quick summary</a></li>
+      <li><a href="#controller">Data controller</a></li>
+      <li><a href="#data">Data we collect</a></li>
+      <li><a href="#sharing">Who data is shared with</a></li>
+      <li><a href="#permissions">Android permissions</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#purchases">Purchases (Plus)</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </details>
+
+  <main id="main-content">
+
+    <section id="summary">
+      <h2><span class="num">§1</span> Quick summary</h2>
+      <p>Before the legal detail, the short version: IDection Player has no servers of its own and no user account. It plays files that are already on your phone, on your local network, or on a server you set up yourself. These are the only places outside your phone the app ever sends anything to, and why:</p>
+      <div class="summary-grid">
+        <div class="summary-row head">
+          <div>Destination</div>
+          <div>What is sent</div>
+          <div>When</div>
+        </div>
+        <div class="summary-row">
+          <div class="label" data-label="Destination">Your own NAS / server<br><span class="dim">(SMB, WebDAV, FTP, DLNA)</span></div>
+          <div data-label="What is sent">The username and password you entered, to connect</div>
+          <div class="dim" data-label="When">Only when you open that connector, inside your local network</div>
+        </div>
+        <div class="summary-row">
+          <div class="label" data-label="Destination">Google<br><span class="dim">(ML Kit, lyrics translation)</span></div>
+          <div data-label="What is sent">Diagnostics about the translation feature, including the languages involved — the lyrics are translated on your phone and are not sent — see §3</div>
+          <div class="dim" data-label="When">Only if you turn on lyrics translation; the first time per language it also downloads a language model</div>
+        </div>
+        <div class="summary-row">
+          <div class="label" data-label="Destination">Google Play</div>
+          <div data-label="What is sent">The purchase transaction for the Plus add-on, and a check for app updates</div>
+          <div class="dim" data-label="When">The purchase, only if you buy Plus — Google processes the payment, not us. The update check, each time the app starts</div>
+        </div>
+        <div class="summary-row">
+          <div class="label" data-label="Destination">Google<br><span class="dim">(Google Cast SDK)</span></div>
+          <div data-label="What is sent">Anonymized logs about finding and using Chromecast devices — see §3</div>
+          <div class="dim" data-label="When">When the app looks for or streams to a Chromecast; sent by Google's own casting library</div>
+        </div>
+        <div class="summary-row">
+          <div class="label" data-label="Destination">Whoever you choose<br><span class="dim">(when sharing the diagnostics log)</span></div>
+          <div data-label="What is sent">The technical error log — see the details in §3</div>
+          <div class="dim" data-label="When">Only if you tap "Share" on that screen and pick a destination yourself</div>
+        </div>
+      </div>
+      <p style="margin-top:16px">We add no analytics or advertising of our own, there is no cross-app tracking, and we sell data to no one. The only diagnostics sent are produced by Google's own libraries — the Cast SDK when you cast, and ML Kit when you translate lyrics — and they never reach us. Everything else — your favorites, your usage history, your saved connectors — lives only on your phone.</p>
+    </section>
+
+    <section id="controller">
+      <h2><span class="num">§2</span> Data controller</h2>
+      <p>IDection Player is developed and published by Sergio Augusto Carvallo Crisóstomo, as an individual — there is no company behind it. For any question about this policy or your data, write to <a href="mailto:skrvaxdev@gmail.com">skrvaxdev@gmail.com</a>.</p>
+    </section>
+
+    <section id="data">
+      <h2><span class="num">§3</span> Data we collect and why</h2>
+
+      <h3>Credentials for your network connectors</h3>
+      <p>When you add an SMB, WebDAV, FTP, or local folder connection, we store the alias, host, port, remote folder, and the username/password you enter. They are stored <strong>encrypted in the operating system's secure storage</strong> (Android Keystore), only on your phone. They are used solely to connect to THAT server when you choose to play something from it — they never leave your local network toward us or any third party.</p>
+
+      <h3>Subtitles</h3>
+      <p>Subtitles come from your own files: the ones already inside the video, a <code>.srt</code> file with the same name next to it, or a file you pick yourself from your device. <strong>The app does not search for or download subtitles from any service</strong>, so nothing about the video you are watching — not its name, not a fingerprint of it — is sent anywhere. Subtitles you load stay only on your device.</p>
+
+      <h3>Usage data, on the device</h3>
+      <p>To show you rankings such as "Most used receivers" or "Tracks played", we store locally which connectors, DLNA/Chromecast receivers, and tracks you used, and how often. This information is kept in a local database (Isar) on your device and is <strong>never transmitted</strong> to any server — not even ours, because we don't have one.</p>
+
+      <h3>Song lyrics</h3>
+      <p>The lyrics you see come from the song file itself: a <code>.lrc</code> file with the same name next to it, or the lyrics saved in the file's own tags. <strong>The app does not ask any service for lyrics</strong>, so the title, the artist or anything else about what you are listening to is never sent anywhere. They are read on your phone, and we do not store them.</p>
+
+      <h3>Lyrics translation (Google ML Kit)</h3>
+      <p>If you turn on translation in the lyrics view, the lyrics are translated <strong>on your phone</strong> with Google's ML Kit library: the text of the lyrics is not sent to any server for translation. The first time you translate from or into a language, ML Kit downloads that language's model (about 30 MB) from Google.</p>
+      <p>As Google documents, <strong>that library, not IDection Player, sends diagnostics and usage data to Google</strong>: information about the phone (manufacturer, model, Android version), the app's package name and version, per-installation identifiers that are not intended to identify you, performance metrics, error codes, and, for this feature, the source and destination languages and the language it detected. Google says it encrypts this data in transit and does not transfer it to third parties. We never receive it. If you never turn on translation, none of this is sent. Details: <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener">ML Kit data disclosure</a>. The target language you choose is stored only on your phone.</p>
+
+      <h3>Casting logs (Google Cast SDK)</h3>
+      <p>To stream to Chromecast devices, the app uses Google's Cast SDK. <strong>That library, not IDection Player, sends anonymized logs to Google</strong> about how casting works: device discovery events, casting session events, general information about the phone, and which app is casting. According to Google, these logs contain no identifiers that can be traced back to you, are encrypted in transit, are used only to improve the casting experience, and are kept for a short period before being aggregated. We never receive them, and neither we nor you can turn them off or request their deletion. Details: <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure" target="_blank" rel="noopener">Cast SDK data disclosure</a>.</p>
+
+      <h3>Notification access: what we do NOT read</h3>
+      <p>The app asks for Android's "Notification access" for two specific purposes, and it is worth being explicit because it is a broad permission: <strong>Android requires it to be enabled in order to see which other apps are playing something</strong> (the only way to offer playback control of other apps, in the Streaming module), and the same access lets the app silence alerts on demand, when you turn on Do Not Disturb in the app, until you turn it off or the chosen time without playback runs out.</p>
+      <p>What the app does with this access is limited by design: <strong>we do not read, store, or transmit the content of any notification.</strong> Technically, the service does not implement the methods that receive notifications — not from messaging apps, not from email, not from anything else. You can revoke this access at any time in Android settings, and the rest of the app keeps working.</p>
+
+      <h3>Status of your Bluetooth devices</h3>
+      <p>The "Bluetooth audio" screen reads from the system which audio device is connected, with which codec, at which volume, and with how much battery, in order to show it to you. This information is read on the spot and is <strong>neither stored nor transmitted</strong>. With the Plus add-on you can also ask the system to use a different codec; that request never leaves the phone. We do not access any other data from your paired devices, nor your contacts, nor messages.</p>
+
+      <h3>Diagnostics log</h3>
+      <p>We keep, locally and only on your phone, a technical log of errors and of some of the app's internal decisions — for example, a playback error, which connector or subtitle was active at that moment, or whether a video was sent as-is or converted before sending it to Chromecast. It may include file or folder names and the alias of your connectors, as well as the app and Android versions — <strong>never your passwords</strong>. It is visible under Settings → Diagnostics log, and it is <strong>never sent anywhere on its own</strong>.</p>
+      <p>If you decide to share it (the "Share" button on that same screen), Android's native share sheet opens so you can choose where to send it — email, WhatsApp, or any other app you have installed. You make that submission yourself, choosing the destination; we do not receive it automatically, and the app or service you choose to send it with is governed by its own privacy policy, not ours. The same screen shows the email address you can send it to if you would like us to review it.</p>
+
+      <h3>What we do NOT do</h3>
+      <ul>
+        <li>We add no analytics, advertising, or tracking SDKs. The only diagnostics sent are those of Google's own libraries described above — the Cast SDK when you cast, and ML Kit when you translate lyrics — which we never receive.</li>
+        <li>We do not access your location — the network permission used to discover Chromecast/DLNA devices is explicitly declared to Android as "never used for location".</li>
+        <li>We do not read the content of your notifications, even with the access enabled (see above).</li>
+        <li>We do not read, index, or upload the content of your audio/video files to any server.</li>
+        <li>We do not sell data to anyone, under any circumstances.</li>
+      </ul>
+    </section>
+
+    <section id="sharing">
+      <h2><span class="num">§4</span> Who data is shared with</h2>
+      <p>Only with these destinations, and only when you use that specific feature:</p>
+      <ul>
+        <li><strong>The server you set up</strong> (your NAS, your PC with a shared folder, your DLNA server) — it receives the credentials you entered yourself, so it can authenticate you.</li>
+        <li><strong>Google (ML Kit)</strong> — only if you turn on lyrics translation, it receives the diagnostics described in <a href="#data">§3</a>, collected directly by Google's library, and serves the language models. The lyrics themselves are translated on your phone.</li>
+        <li><strong>Google Play (Google LLC)</strong> — it processes the purchase of the Plus add-on through Google Play Billing. We only receive confirmation that the purchase exists, never your payment method or banking details. Each time the app starts it also asks Google Play, on your phone, whether a newer version is available, and Google Play offers to download it; this uses Google Play's in-app updates service and sends no data of ours.</li>
+        <li><strong>Google (Google Cast SDK)</strong> — it receives the anonymized casting logs described in <a href="#data">§3</a>, collected directly by Google's library. They are not shared with us or with anyone else.</li>
+        <li><strong>Whoever you choose, when sharing the diagnostics log</strong> — the app opens Android's native share sheet and you decide the destination (email, WhatsApp, or another installed app). It is not an automatic submission on our part; see the details in <a href="#data">§3</a>.</li>
+      </ul>
+      <div class="callout"><strong>Chromecast and Google Cast are trademarks of Google LLC.</strong> This app uses the public Google Cast SDK to stream to Chromecast devices on your local network. This app is not affiliated with, sponsored by, or endorsed by Google.</div>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="num">§5</span> Android permissions and why we request them</h2>
+      <div class="perms-wrap">
+        <table class="perms">
+          <thead>
+            <tr><th>Permission</th><th>What we use it for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="perm-name">INTERNET</td><td>Connecting to your network connectors, to Chromecast/DLNA, and downloading translation language models.</td></tr>
+            <tr><td class="perm-name">ACCESS_WIFI_STATE / ACCESS_NETWORK_STATE</td><td>Knowing whether a network is available before trying to connect.</td></tr>
+            <tr><td class="perm-name">CHANGE_WIFI_MULTICAST_STATE</td><td>Discovering DLNA receivers on your local network, and being visible as a receiver when you turn that mode on (SSDP protocol).</td></tr>
+            <tr><td class="perm-name">NEARBY_WIFI_DEVICES</td><td>Discovering nearby Chromecast devices. Explicitly declared as <em>never used for location</em>.</td></tr>
+            <tr><td class="perm-name">READ_MEDIA_AUDIO / READ_MEDIA_VIDEO</td><td>Seeing and playing the audio/video files you choose from the local folder you set up.</td></tr>
+            <tr><td class="perm-name">READ_EXTERNAL_STORAGE</td><td>The same, on Android versions before 13, where the separate audio and video permissions do not exist yet.</td></tr>
+            <tr><td class="perm-name">BLUETOOTH / BLUETOOTH_CONNECT</td><td>Reading which Bluetooth audio device is connected, with which codec and battery level, and — with Plus — asking the system to use a different codec. See <a href="#data">§3</a>.</td></tr>
+            <tr><td class="perm-name">FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK</td><td>Keeping playback going when you turn off the screen or switch apps.</td></tr>
+            <tr><td class="perm-name">POST_NOTIFICATIONS</td><td>Showing playback controls in the notification.</td></tr>
+            <tr><td class="perm-name">ACCESS_NOTIFICATION_POLICY</td><td>Silencing system alerts on demand, when you turn on Do Not Disturb in the app, until you turn it off or the chosen time without playback runs out.</td></tr>
+            <tr><td class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td><td>Being able to ask you — never force you — to keep the system from freezing the app while it plays in the background. On some phones it is the only way to keep music from stopping on its own.</td></tr>
+            <tr><td class="perm-name">WAKE_LOCK</td><td>Keeping the phone from sleeping in the middle of playback.</td></tr>
+            <tr><td class="perm-name">RECEIVE_BOOT_COMPLETED</td><td>Included by the video player library, through Android's WorkManager, so that background work it had scheduled (such as caching part of a video) can resume after the phone restarts. IDection Player does not start playing, connecting, or sending anything on its own when the phone turns on.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Besides the list above, the app uses <strong>Notification access</strong>, which is not a regular permission but a switch you grant in Android settings. It requests it to see which other apps are playing something and to silence alerts on demand, when you turn on Do Not Disturb in the app, until you turn it off or the chosen time without playback runs out; <strong>it does not read the content of any notification</strong>. The details are in <a href="#data">§3</a>, and you can revoke it whenever you want without the rest of the app stopping working.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">§6</span> Security</h2>
+      <p>Every credential (network connectors) is stored encrypted using <code>flutter_secure_storage</code>, backed by the operating system's own Android Keystore — the same mechanism banking apps use to protect sensitive data on the device. They are never stored in plain text, nor in the local database, nor in backup files.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">§7</span> Retention and how to delete your data</h2>
+      <p>Since there is no account and no server of our own, all your data lives on your device. You can delete it yourself at any time, without having to contact us:</p>
+      <ul>
+        <li><strong>A single connector:</strong> tap the delete icon next to that connection, in the Connectors section.</li>
+        <li><strong>The cache of downloaded files:</strong> the "Cache" card on the Home screen, "Clear now" button.</li>
+        <li><strong>The diagnostics log:</strong> the delete icon under Settings → Diagnostics log.</li>
+        <li><strong>Everything at once:</strong> uninstalling the app deletes absolutely all of the above — nothing remains on any server, because there was never a copy outside your phone.</li>
+      </ul>
+    </section>
+
+    <section id="purchases">
+      <h2><span class="num">§8</span> Purchases: the Plus add-on</h2>
+      <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio, video on the phone with your own subtitles, the equalizer, local folders, and one DLNA library and one DLNA receiver.</p>
+      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV/FTP/FTPS), switching the Bluetooth codec, publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
+      <p>It is processed entirely through Google Play Billing; you can restore your purchase on any device where you sign in with the same Google account, using the "Restore purchase" button on the Plus screen.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">§9</span> Children</h2>
+      <p>IDection Player is not directed at children under 13 and does not knowingly collect data from children.</p>
+      <p>As explained in <a href="#data">§3</a>, the app has no server of its own: we keep no copy of credentials anywhere we can access. So if a child in your care used the app, the most effective step is not to write to us, but rather:</p>
+      <ul>
+        <li><strong>Credentials for a network connector (SMB/WebDAV/FTP):</strong> they live encrypted only on that phone. Uninstalling the app deletes them completely, or you can change the password of that server directly.</li>
+      </ul>
+      <p>If instead you wrote to us directly (for example, by email, sharing personal information), we can delete that specific communication on request: <a href="mailto:skrvaxdev@gmail.com">skrvaxdev@gmail.com</a>.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">§10</span> Changes to this policy</h2>
+      <p>If we change what data we collect or how we use it, we will update this same page and the date in the header. Important changes (for example, adding a new type of data shared with a third party) will also be announced inside the app.</p>
+      <p>This is the first published version of this policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">§11</span> Contact</h2>
+      <p>For questions, data access or deletion requests, or any concern about this policy: <a href="mailto:skrvaxdev@gmail.com">skrvaxdev@gmail.com</a>.</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <hr class="rule">
+  <p>IDection Player — Privacy Policy · Version 1.0 · September 18, 2026</p>
+</footer>
+</body>
+</html>
