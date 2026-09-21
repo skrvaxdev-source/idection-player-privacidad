@@ -408,8 +408,8 @@
       <p class="lede">How IDection Player handles your data when playing audio and video locally, over your network, and through Chromecast/DLNA.</p>
       <div class="meta-row">
         <span><strong>App:</strong> IDection Player</span>
-        <span><strong>Policy version:</strong> 1.0</span>
-        <span><strong>Last updated:</strong> September 18, 2026</span>
+        <span><strong>Policy version:</strong> 1.1</span>
+        <span><strong>Last updated:</strong> September 21, 2026</span>
       </div>
     </div>
   </div>
@@ -459,7 +459,7 @@
           <div>When</div>
         </div>
         <div class="summary-row">
-          <div class="label" data-label="Destination">Your own NAS / server<br><span class="dim">(SMB, WebDAV, FTP, DLNA)</span></div>
+          <div class="label" data-label="Destination">Your own NAS / server<br><span class="dim">(SMB, WebDAV, DLNA)</span></div>
           <div data-label="What is sent">The username and password you entered, to connect</div>
           <div class="dim" data-label="When">Only when you open that connector, inside your local network</div>
         </div>
@@ -496,13 +496,13 @@
       <h2><span class="num">§3</span> Data we collect and why</h2>
 
       <h3>Credentials for your network connectors</h3>
-      <p>When you add an SMB, WebDAV, FTP, or local folder connection, we store the alias, host, port, remote folder, and the username/password you enter. They are stored <strong>encrypted in the operating system's secure storage</strong> (Android Keystore), only on your phone. They are used solely to connect to THAT server when you choose to play something from it — they never leave your local network toward us or any third party.</p>
+      <p>When you add an SMB, WebDAV, or local folder connection, we store the alias, host, port, remote folder, and the username/password you enter. They are stored <strong>encrypted in the operating system's secure storage</strong> (Android Keystore), only on your phone. They are used solely to connect to THAT server when you choose to play something from it — they never leave your local network toward us or any third party.</p>
 
       <h3>Subtitles</h3>
       <p>Subtitles come from your own files: the ones already inside the video, a <code>.srt</code> file with the same name next to it, or a file you pick yourself from your device. <strong>The app does not search for or download subtitles from any service</strong>, so nothing about the video you are watching — not its name, not a fingerprint of it — is sent anywhere. Subtitles you load stay only on your device.</p>
 
       <h3>Usage data, on the device</h3>
-      <p>To show you rankings such as "Most used receivers" or "Tracks played", we store locally which connectors, DLNA/Chromecast receivers, and tracks you used, and how often. This information is kept in a local database (Isar) on your device and is <strong>never transmitted</strong> to any server — not even ours, because we don't have one.</p>
+      <p>To show you rankings such as "Most used receivers" or "Tracks played", we store locally which connectors, DLNA/Chromecast receivers, and tracks you used, and how often. This information is kept in a local database (Isar) on your device and is <strong>never transmitted</strong> to any server — not even ours, because we don't have one. Likewise, for the "DSF receivers" setting it keeps, only on your phone, the name and the network identifier (UDN) of the DLNA receivers found on your network, and whether you marked each one to receive DSD audio as is.</p>
 
       <h3>Song lyrics</h3>
       <p>The lyrics you see come from the song file itself: a <code>.lrc</code> file with the same name next to it, or the lyrics saved in the file's own tags. <strong>The app does not ask any service for lyrics</strong>, so the title, the artist or anything else about what you are listening to is never sent anywhere. They are read on your phone, and we do not store them.</p>
@@ -593,8 +593,8 @@
 
     <section id="purchases">
       <h2><span class="num">§8</span> Purchases: the Plus add-on</h2>
-      <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio, video on the phone with your own subtitles, the equalizer, local folders, and one DLNA library and one DLNA receiver.</p>
-      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV/FTP/FTPS), switching the Bluetooth codec, publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
+      <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio except DSD, video on the phone with your own subtitles, the equalizer, local folders, and one DLNA library and one DLNA receiver.</p>
+      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV), playing DSD audio (DSF/DFF), switching the Bluetooth codec, publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
       <p>It is processed entirely through Google Play Billing; you can restore your purchase on any device where you sign in with the same Google account, using the "Restore purchase" button on the Plus screen.</p>
     </section>
 
@@ -603,7 +603,7 @@
       <p>IDection Player is not directed at children under 13 and does not knowingly collect data from children.</p>
       <p>As explained in <a href="#data">§3</a>, the app has no server of its own: we keep no copy of credentials anywhere we can access. So if a child in your care used the app, the most effective step is not to write to us, but rather:</p>
       <ul>
-        <li><strong>Credentials for a network connector (SMB/WebDAV/FTP):</strong> they live encrypted only on that phone. Uninstalling the app deletes them completely, or you can change the password of that server directly.</li>
+        <li><strong>Credentials for a network connector (SMB/WebDAV):</strong> they live encrypted only on that phone. Uninstalling the app deletes them completely, or you can change the password of that server directly.</li>
       </ul>
       <p>If instead you wrote to us directly (for example, by email, sharing personal information), we can delete that specific communication on request: <a href="mailto:skrvaxdev@gmail.com">skrvaxdev@gmail.com</a>.</p>
     </section>
@@ -611,7 +611,10 @@
     <section id="changes">
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data we collect or how we use it, we will update this same page and the date in the header. Important changes (for example, adding a new type of data shared with a third party) will also be announced inside the app.</p>
-      <p>This is the first published version of this policy.</p>
+      <ul>
+        <li><strong>Version 1.1 (September 21, 2026):</strong> FTP connections are no longer part of the app, so they are no longer mentioned; playing DSD audio (DSF/DFF) is now part of the Plus add-on; and the "DSF receivers" setting, stored only on your phone, is described. Nothing changes in what data is collected or shared.</li>
+        <li><strong>Version 1.0 (September 18, 2026):</strong> first published version.</li>
+      </ul>
     </section>
 
     <section id="contact">
@@ -624,7 +627,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Player — Privacy Policy · Version 1.0 · September 18, 2026</p>
+  <p>IDection Player — Privacy Policy · Version 1.1 · September 21, 2026</p>
 </footer>
 </body>
 </html>
