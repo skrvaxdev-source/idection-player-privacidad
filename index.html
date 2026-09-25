@@ -409,7 +409,7 @@
       <div class="meta-row">
         <span><strong>App:</strong> IDection Player</span>
         <span><strong>Policy version:</strong> 1.1</span>
-        <span><strong>Last updated:</strong> September 21, 2026</span>
+        <span><strong>Last updated:</strong> September 24, 2026</span>
       </div>
     </div>
   </div>
@@ -519,7 +519,7 @@
       <p>What the app does with this access is limited by design: <strong>we do not read, store, or transmit the content of any notification.</strong> Technically, the service does not implement the methods that receive notifications — not from messaging apps, not from email, not from anything else. You can revoke this access at any time in Android settings, and the rest of the app keeps working.</p>
 
       <h3>Status of your Bluetooth devices</h3>
-      <p>The "Bluetooth audio" screen reads from the system which audio device is connected, with which codec, at which volume, and with how much battery, in order to show it to you. This information is read on the spot and is <strong>neither stored nor transmitted</strong>. With the Plus add-on you can also ask the system to use a different codec; that request never leaves the phone. We do not access any other data from your paired devices, nor your contacts, nor messages.</p>
+      <p>The "Bluetooth audio" screen reads from the system which audio device is connected, with which codec, at which volume, and with how much battery, in order to show it to you. This information is read on the spot and is <strong>neither stored nor transmitted</strong>. With the Plus add-on you can also ask the system to use a different codec, on devices that allow it: some phones do not let apps read or change the codec, and on those the app says so and does not offer the option. That request never leaves the phone. We do not access any other data from your paired devices, nor your contacts, nor messages.</p>
 
       <h3>Diagnostics log</h3>
       <p>We keep, locally and only on your phone, a technical log of errors and of some of the app's internal decisions — for example, a playback error, which connector or subtitle was active at that moment, or whether a video was sent as-is or converted before sending it to Chromecast. It may include file or folder names and the alias of your connectors, as well as the app and Android versions — <strong>never your passwords</strong>. It is visible under Settings → Diagnostics log, and it is <strong>never sent anywhere on its own</strong>.</p>
@@ -562,7 +562,7 @@
             <tr><td class="perm-name">NEARBY_WIFI_DEVICES</td><td>Discovering nearby Chromecast devices. Explicitly declared as <em>never used for location</em>.</td></tr>
             <tr><td class="perm-name">READ_MEDIA_AUDIO / READ_MEDIA_VIDEO</td><td>Seeing and playing the audio/video files you choose from the local folder you set up.</td></tr>
             <tr><td class="perm-name">READ_EXTERNAL_STORAGE</td><td>The same, on Android versions before 13, where the separate audio and video permissions do not exist yet.</td></tr>
-            <tr><td class="perm-name">BLUETOOTH / BLUETOOTH_CONNECT</td><td>Reading which Bluetooth audio device is connected, with which codec and battery level, and — with Plus — asking the system to use a different codec. See <a href="#data">§3</a>.</td></tr>
+            <tr><td class="perm-name">BLUETOOTH / BLUETOOTH_CONNECT</td><td>Reading which Bluetooth audio device is connected, with which codec and battery level, and — with Plus, where the device allows it — asking the system to use a different codec. See <a href="#data">§3</a>.</td></tr>
             <tr><td class="perm-name">FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK</td><td>Keeping playback going when you turn off the screen or switch apps.</td></tr>
             <tr><td class="perm-name">POST_NOTIFICATIONS</td><td>Showing playback controls in the notification.</td></tr>
             <tr><td class="perm-name">ACCESS_NOTIFICATION_POLICY</td><td>Silencing system alerts on demand, when you turn on Do Not Disturb in the app, until you turn it off or the chosen time without playback runs out.</td></tr>
@@ -594,7 +594,7 @@
     <section id="purchases">
       <h2><span class="num">§8</span> Purchases: the Plus add-on</h2>
       <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio except DSD, video on the phone with your own subtitles, the equalizer, local folders, and one DLNA library and one DLNA receiver.</p>
-      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV), playing DSD audio (DSF/DFF), switching the Bluetooth codec, publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
+      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV), playing DSD audio (DSF/DFF), switching the Bluetooth codec (on devices that allow it), publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
       <p>It is processed entirely through Google Play Billing; you can restore your purchase on any device where you sign in with the same Google account, using the "Restore purchase" button on the Plus screen.</p>
     </section>
 
@@ -612,6 +612,7 @@
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data we collect or how we use it, we will update this same page and the date in the header. Important changes (for example, adding a new type of data shared with a third party) will also be announced inside the app.</p>
       <ul>
+        <li><strong>Version 1.2 (September 24, 2026):</strong> switching the Bluetooth codec is described as available only on devices that allow it — some phones do not let apps read or change the codec, and on those the app does not offer it. Nothing changes in what data is collected or shared.</li>
         <li><strong>Version 1.1 (September 21, 2026):</strong> FTP connections are no longer part of the app, so they are no longer mentioned; playing DSD audio (DSF/DFF) is now part of the Plus add-on; and the "DSF receivers" setting, stored only on your phone, is described. Nothing changes in what data is collected or shared.</li>
         <li><strong>Version 1.0 (September 18, 2026):</strong> first published version.</li>
       </ul>
@@ -627,7 +628,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Player — Privacy Policy · Version 1.1 · September 21, 2026</p>
+  <p>IDection Player — Privacy Policy · Version 1.2 · September 24, 2026</p>
 </footer>
 </body>
 </html>
