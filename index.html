@@ -408,8 +408,8 @@
       <p class="lede">How IDection Player handles your data when playing audio and video locally, over your network, and through Chromecast/DLNA.</p>
       <div class="meta-row">
         <span><strong>App:</strong> IDection Player</span>
-        <span><strong>Policy version:</strong> 1.1</span>
-        <span><strong>Last updated:</strong> September 24, 2026</span>
+        <span><strong>Policy version:</strong> 1.3</span>
+        <span><strong>Last updated:</strong> September 26, 2026</span>
       </div>
     </div>
   </div>
@@ -543,6 +543,7 @@
         <li><strong>Google (ML Kit)</strong> — only if you turn on lyrics translation, it receives the diagnostics described in <a href="#data">§3</a>, collected directly by Google's library, and serves the language models. The lyrics themselves are translated on your phone.</li>
         <li><strong>Google Play (Google LLC)</strong> — it processes the purchase of the Plus add-on through Google Play Billing. We only receive confirmation that the purchase exists, never your payment method or banking details. Each time the app starts it also asks Google Play, on your phone, whether a newer version is available, and Google Play offers to download it; this uses Google Play's in-app updates service and sends no data of ours.</li>
         <li><strong>Google (Google Cast SDK)</strong> — it receives the anonymized casting logs described in <a href="#data">§3</a>, collected directly by Google's library. They are not shared with us or with anyone else.</li>
+        <li><strong>Your other devices in IDection Team</strong> — if you turn it on, this device shares with the other devices running IDection Player that you selected, on your local network: the track being played (served directly from this phone), its title, artist, album and cover, the volume, and timing messages used to keep playback in sync. This stays inside your local network and is never sent to us or to any third party.</li>
         <li><strong>Whoever you choose, when sharing the diagnostics log</strong> — the app opens Android's native share sheet and you decide the destination (email, WhatsApp, or another installed app). It is not an automatic submission on our part; see the details in <a href="#data">§3</a>.</li>
       </ul>
       <div class="callout"><strong>Chromecast and Google Cast are trademarks of Google LLC.</strong> This app uses the public Google Cast SDK to stream to Chromecast devices on your local network. This app is not affiliated with, sponsored by, or endorsed by Google.</div>
@@ -593,8 +594,8 @@
 
     <section id="purchases">
       <h2><span class="num">§8</span> Purchases: the Plus add-on</h2>
-      <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio except DSD, video on the phone with your own subtitles, the equalizer, local folders, and one DLNA library and one DLNA receiver.</p>
-      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV), playing DSD audio (DSF/DFF), switching the Bluetooth codec (on devices that allow it), publishing this device as a DLNA receiver or library, and using more than one DLNA library and receiver.</p>
+      <p>IDection Player works fully and <strong>without ads</strong> in its free mode: all audio except DSD, video on the phone with your own subtitles, the equalizer, local folders, one DLNA library and one DLNA receiver, publishing this device as a DLNA receiver or library, and IDection Team.</p>
+      <p>The <strong>Plus</strong> add-on is a single, lifetime purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks: streaming to Chromecast, sending video to a network receiver, network connectors (SMB/WebDAV), playing DSD audio (DSF/DFF), switching the Bluetooth codec (on devices that allow it), and using more than one DLNA library and receiver.</p>
       <p>It is processed entirely through Google Play Billing; you can restore your purchase on any device where you sign in with the same Google account, using the "Restore purchase" button on the Plus screen.</p>
     </section>
 
@@ -612,6 +613,7 @@
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data we collect or how we use it, we will update this same page and the date in the header. Important changes (for example, adding a new type of data shared with a third party) will also be announced inside the app.</p>
       <ul>
+        <li><strong>Version 1.3 (September 26, 2026):</strong> describes IDection Team and what it shares on your local network; publishing this device as a DLNA receiver or library is part of the free mode.</li>
         <li><strong>Version 1.2 (September 24, 2026):</strong> switching the Bluetooth codec is described as available only on devices that allow it — some phones do not let apps read or change the codec, and on those the app does not offer it. Nothing changes in what data is collected or shared.</li>
         <li><strong>Version 1.1 (September 21, 2026):</strong> FTP connections are no longer part of the app, so they are no longer mentioned; playing DSD audio (DSF/DFF) is now part of the Plus add-on; and the "DSF receivers" setting, stored only on your phone, is described. Nothing changes in what data is collected or shared.</li>
         <li><strong>Version 1.0 (September 18, 2026):</strong> first published version.</li>
@@ -628,7 +630,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Player — Privacy Policy · Version 1.2 · September 24, 2026</p>
+  <p>IDection Player — Privacy Policy · Version 1.3 · September 26, 2026</p>
 </footer>
 </body>
 </html>
